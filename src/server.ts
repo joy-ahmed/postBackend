@@ -9,7 +9,7 @@ app.use(morgan(':method :url :status :response-time ms'));
 app.use(express.json())
 
 app.use('/api', postRoute)
-app.use('/api', userRoute)
+app.use('/', userRoute)
 
 app.get('/', (req, res) => {
     res.json({ hello: 'world' })
